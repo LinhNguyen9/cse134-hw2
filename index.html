@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sophia Brown's Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Sophia Brown's portfolio">
+        <meta name="keywords" content="student, portfolio, website, webpage, page">
+        <link rel="icon" src="/assests/homepage.png"/>
+        <a target="_blank" href="https://icons8.com/icon/2797/home">Home</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        
+        <style>
+            td, th{
+                border: 1px solid black;
+                padding: 8px;
+            }
+
+        </style>
+    </head>    
+    <body>
+        <main>
+            
+                <h1 style="color:pink"><i>Hi, I'm Sophia Brown</i></h1>
+                
+                <div>
+                    <picture>
+                        <source srcset="/assests/chopper.png" type="image/webp">
+                        <img alt="Picture of Sophia Brown" src="/assests/chopper.png" height="400px;" style="width:auto;">
+                    </picture>
+
+                    <aside><strong>
+                        <p style="font-size:160%;">"I'm gonna try even <span style="color:red;font-weight:bold">harder</span> and be <span style="color:red;font-weight:bold">helpful</span> to everyone!"</p>
+                    </strong>
+                    </aside>
+                </div>
+
+                <figure>
+                    <figcaption>Let's listen to some rain sound while checking out my page</figcaption>
+                    <audio controls src="/assests/lake-rain.mp3">
+                      <!-- <a href="lake-rain.mp3"> Download audio </a> -->
+                      <source src="/assests/lake-rain.mp3" type="audio/mp3">
+                    </audio>
+                </figure>
+                <p><em>Let's me show you a surprise</em></p>
+                <button onclick="showContent()">Click on me</button>
+                <p>See nothing?</p>
+                <p>Scoll all the way down ^^</p>
+                <div>
+                <template>
+                    <h2>Flower</h2>
+                    <svg height="130" width="500">
+                        <ellipse cx="100" cy="70" rx="85" ry="55" stroke="black" stroke-width="3" fill="pink" />
+                        <text x="100" y="75" font-size="20" text-anchor="middle" fill="white">Surprise!!!</text>
+                    </svg>
+                </template>
+    
+                <script>
+                function showContent() {
+                    let temp = document.getElementsByTagName("template")[0];
+                    let clon = temp.content.cloneNode(true);
+                    document.body.appendChild(clon);
+                }
+                </script>
+                </div>
+            <hr>
+
+            <section>
+                <h2 style="color:blueviolet"><em> Biography </em></h2>
+                <hr>
+                <p>Hi there, I am a newly graduated student from UCSD. 
+                    As I'm stepping into the next chapter of my career, I'm excited to continue exploring the 
+                    synergy between algorithms and UI/UX design, with the ultimate goal 
+                    of contributing to innovative and user-centric technological solutions. 
+                    My journey at UCSD has laid a solid foundation, and I am poised to make a significant impact 
+                    in the world of computer engineering.</p>
+            </section>
+
+            <!-- <iframe src="//www.google.com/"></iframe> -->
+            <form>
+                <fieldset>
+                    <legend>Acadamic History</legend>
+                    <table>
+                        <colgroup>
+                            <col span="1">
+                            <col span="1">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th colspan="3">Courses Taken</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CSE 100</td>
+                                <td>CSE 110</td>
+                                <td>CSE 120</td>
+                            </tr>
+                            <tr>
+                                <td>ECE 101: Linear Systems</td>
+                                <td>ECE 109 Engineering Probability & Stats</td>
+                                <td>ECE 111</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </fieldset>
+            </form>
+
+            <p><b>Let's draw some transparent rectangles</b></p>
+            <canvas id="myCanvas">
+                This is three transparent rectangles
+            </canvas>
+            
+            <script>
+                const c = document.getElementById("myCanvas");
+                const ctx = c.getContext("2d");
+                ctx.fillStyle = "pink";
+                ctx.fillRect(20, 20, 75, 50);
+                
+                //Turn transparency on
+                ctx.globalAlpha = 0.2;
+                ctx.fillStyle = "purple"; 
+                ctx.fillRect(50, 50, 75, 50); 
+                ctx.fillStyle = "green"; 
+                ctx.fillRect(80, 80, 75, 50);
+            </script>
+        </main>
+
+        <footer>
+            <nav>
+                <ul>
+                    <a href="resume.html">Resume</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+              </nav>
+        </footer>
+    </body>
+</html>

@@ -209,6 +209,11 @@ form:has(table) {
         row-gap: 5rem;
     }
 
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+    }
+
     .flex-container-second{
         display: flex;
         flex-direction: column;
